@@ -1,9 +1,11 @@
 const express = require("express");
 const fetch = require("node-fetch");
+const cors = require("cors");
 
 require("dotenv").config();
 
 const router = express.Router();
+router.use(cors());
 
 const API_KEY = process.env.SPOONACULAR_KEY;
 
